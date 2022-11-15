@@ -13,9 +13,10 @@ namespace semana16.Controllers
         {
             return View();
         }
-        public string welcome()
+        public IActionResult Bienvenida(string name, int NumTimes = 1)
         {
-            return "esta es la accion de bienvenida";
+            ViewData["name"] = "Hola" + name;
+            ViewData["NumTimes"] = NumTimes;
         }
         public string Parameters(string name, int edad)
         {
